@@ -1,1 +1,680 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rogge & Sohn Elektrotechnik GmbH | Elektriker in Berlin-Spandau</title>
+<meta name="description" content="Elektriker in Berlin-Spandau: Elektroinstallation, Verteilersysteme, Datennetzwerke & Lichtkonzepte. Meisterbetrieb mit 5,0★ Bewertung. Jetzt Termin sichern – schnell, sauber, zuverlässig.">
+<meta name="keywords" content="Elektriker Berlin Spandau, Elektroinstallation Spandau, Verteilerkasten Erneuern Berlin, Elektrotechnik Spandau, Elektriker Notdienst Berlin, Datennetzwerk Installation Berlin, Sicherungskasten Elektriker Spandau">
+<meta property="og:title" content="Rogge & Sohn Elektrotechnik GmbH – Ihr Elektriker in Berlin-Spandau">
+<meta property="og:description" content="Elektroinstallation, Verteilersysteme, Lichtkonzepte & Datennetzwerke aus einer Hand. Familienbetrieb in Spandau, 5,0★ bei Google.">
+<meta property="og:type" content="business.business">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.roggeundsohnelektrotechnik.de/">
 
+<!-- Local Business Schema for SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Electrician",
+  "name": "Rogge & Sohn Elektrotechnik GmbH",
+  "image": "https://www.roggeundsohnelektrotechnik.de/og-image.jpg",
+  "telephone": "+49-30-35303818",
+  "email": "info@roggeundsohnelektrotechnik.de",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Wustermarker Str. 21",
+    "addressLocality": "Berlin",
+    "addressRegion": "Spandau",
+    "postalCode": "13583",
+    "addressCountry": "DE"
+  },
+  "areaServed": "Berlin-Spandau",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "9"
+  },
+  "priceRange": "€€"
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg:#12161b;
+    --panel:#1b2129;
+    --panel-2:#212933;
+    --line:#2c3540;
+    --copper:#c97c3d;
+    --amber:#e8a93d;
+    --teal:#4fa393;
+    --text:#eeeae2;
+    --text-dim:#9aa5af;
+    --danger:#c0553f;
+    --radius:2px;
+    --maxw:1180px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:'IBM Plex Sans', sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:600;
+    margin:0 0 .5em;
+    letter-spacing:-.01em;
+  }
+  .mono{font-family:'IBM Plex Mono', monospace;}
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+  section{padding:96px 0;position:relative;}
+  @media(max-width:640px){section{padding:64px 0;}}
+
+  /* focus visibility */
+  a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
+    outline:2px solid var(--amber);outline-offset:3px;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important;}
+  }
+
+  /* ===== NAV ===== */
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    background:rgba(18,22,27,.9);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  nav.wrap{display:flex;align-items:center;justify-content:space-between;height:74px;}
+  .brand{display:flex;align-items:center;gap:10px;font-family:'Space Grotesk';font-weight:700;font-size:1.05rem;text-decoration:none;}
+  .brand .bolt{color:var(--amber);font-size:1.3rem;}
+  .navlinks{display:flex;gap:28px;font-size:.92rem;}
+  .navlinks a{text-decoration:none;color:var(--text-dim);transition:color .2s;}
+  .navlinks a:hover{color:var(--amber);}
+  .nav-cta{
+    background:var(--amber);color:#181205;padding:10px 18px;border-radius:var(--radius);
+    text-decoration:none;font-weight:600;font-size:.88rem;white-space:nowrap;
+  }
+  .burger{display:none;background:none;border:1px solid var(--line);color:var(--text);padding:8px 10px;border-radius:2px;}
+  @media(max-width:860px){
+    .navlinks{position:fixed;top:74px;left:0;right:0;background:var(--panel);flex-direction:column;padding:20px 24px;gap:18px;border-bottom:1px solid var(--line);transform:translateY(-130%);transition:transform .3s ease;}
+    .navlinks.open{transform:translateY(0);}
+    .burger{display:block;}
+  }
+
+  /* ===== HERO / VERTEILERKASTEN ===== */
+  .hero{
+    padding-top:170px;padding-bottom:80px;
+    background:
+      radial-gradient(ellipse 900px 500px at 80% -10%, rgba(201,124,61,.14), transparent 60%),
+      var(--bg);
+    overflow:hidden;
+  }
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center;}
+  @media(max-width:940px){.hero-grid{grid-template-columns:1fr;gap:48px;}}
+  .eyebrow{
+    font-family:'IBM Plex Mono';font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--amber);display:flex;align-items:center;gap:10px;margin-bottom:18px;
+  }
+  .eyebrow::before{content:'';width:22px;height:1px;background:var(--amber);}
+  .hero h1{font-size:clamp(2.1rem,4.4vw,3.4rem);line-height:1.08;}
+  .hero h1 em{font-style:normal;color:var(--amber);}
+  .hero p.lead{color:var(--text-dim);font-size:1.08rem;max-width:46ch;margin:20px 0 32px;}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:14px;}
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;padding:14px 24px;border-radius:var(--radius);
+    font-weight:600;font-size:.94rem;text-decoration:none;border:1px solid transparent;
+    transition:transform .18s ease, background .2s ease, border-color .2s ease;
+    cursor:pointer;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn-primary{background:var(--amber);color:#181205;}
+  .btn-primary:hover{background:#f0b654;}
+  .btn-ghost{background:transparent;color:var(--text);border-color:var(--line);}
+  .btn-ghost:hover{border-color:var(--amber);color:var(--amber);}
+  .btn-whatsapp{background:#2f6e5c;color:#eafff5;}
+  .btn-whatsapp:hover{background:#357d68;}
+
+  .trustline{display:flex;gap:26px;margin-top:44px;flex-wrap:wrap;}
+  .trust-item{font-family:'IBM Plex Mono';font-size:.82rem;color:var(--text-dim);}
+  .trust-item b{color:var(--amber);font-size:1.15rem;display:block;font-family:'Space Grotesk';}
+
+  /* Distribution panel illustration */
+  .panelbox{
+    background:linear-gradient(180deg,var(--panel-2),var(--panel));
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:22px;
+    box-shadow:0 30px 60px -20px rgba(0,0,0,.6);
+  }
+  .panelbox-head{display:flex;justify-content:space-between;align-items:center;padding-bottom:14px;border-bottom:1px dashed var(--line);margin-bottom:16px;}
+  .panelbox-head span{font-family:'IBM Plex Mono';font-size:.7rem;color:var(--text-dim);letter-spacing:.08em;}
+  .panelbox-head .dot{width:8px;height:8px;border-radius:50%;background:var(--amber);box-shadow:0 0 8px var(--amber);animation:blink 2.4s ease-in-out infinite;}
+  @keyframes blink{0%,100%{opacity:1;}50%{opacity:.35;}}
+  .breakers{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;}
+  .breaker{
+    background:var(--bg);border:1px solid var(--line);border-radius:3px;padding:14px 12px;
+    opacity:0;transform:translateY(10px);
+    animation:switchOn .5s ease forwards;
+  }
+  .breaker:nth-child(1){animation-delay:.15s;}
+  .breaker:nth-child(2){animation-delay:.35s;}
+  .breaker:nth-child(3){animation-delay:.55s;}
+  .breaker:nth-child(4){animation-delay:.75s;}
+  .breaker:nth-child(5){animation-delay:.95s;}
+  .breaker:nth-child(6){animation-delay:1.15s;}
+  @keyframes switchOn{to{opacity:1;transform:translateY(0);}}
+  .breaker .code{font-family:'IBM Plex Mono';font-size:.68rem;color:var(--copper);letter-spacing:.06em;}
+  .breaker .label{font-size:.86rem;font-weight:500;margin-top:4px;}
+  .breaker .switch{width:26px;height:14px;background:var(--amber);border-radius:2px;margin-top:10px;position:relative;box-shadow:0 0 10px rgba(232,169,61,.5);}
+  .breaker .switch::after{content:'';position:absolute;right:2px;top:2px;bottom:2px;width:9px;background:#181205;border-radius:1px;}
+
+  /* ===== SECTION HEADERS ===== */
+  .sec-head{max-width:640px;margin-bottom:52px;}
+  .sec-head .eyebrow{margin-bottom:14px;}
+  .sec-head h2{font-size:clamp(1.7rem,3vw,2.3rem);}
+  .sec-head p{color:var(--text-dim);}
+
+  /* ===== ABOUT ===== */
+  .about{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;}
+  @media(max-width:860px){.about-grid{grid-template-columns:1fr;}}
+  .about-figure{
+    aspect-ratio:4/3;background:
+      repeating-linear-gradient(135deg, rgba(201,124,61,.08) 0 2px, transparent 2px 14px),
+      var(--panel-2);
+    border:1px solid var(--line);border-radius:4px;
+    display:flex;align-items:center;justify-content:center;
+    color:var(--text-dim);font-family:'IBM Plex Mono';font-size:.8rem;text-align:center;padding:20px;
+  }
+  .about-list{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:14px;}
+  .about-list li{display:flex;gap:12px;font-size:.96rem;}
+  .about-list li::before{content:'⚡';color:var(--amber);flex-shrink:0;}
+
+  /* ===== SERVICES ===== */
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  @media(max-width:900px){.services-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:600px){.services-grid{grid-template-columns:1fr;}}
+  .service-card{
+    background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:26px 22px;
+    transition:border-color .2s, transform .2s;
+  }
+  .service-card:hover{border-color:var(--copper);transform:translateY(-4px);}
+  .service-card .num{font-family:'IBM Plex Mono';color:var(--copper);font-size:.78rem;}
+  .service-card h3{font-size:1.08rem;margin:10px 0 8px;}
+  .service-card p{color:var(--text-dim);font-size:.9rem;margin:0;}
+
+  /* ===== GALLERY ===== */
+  .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+  @media(max-width:860px){.gallery-grid{grid-template-columns:repeat(2,1fr);}}
+  .gallery-item{
+    aspect-ratio:1;background:var(--panel-2);border:1px dashed var(--line);border-radius:4px;
+    display:flex;align-items:center;justify-content:center;text-align:center;padding:14px;
+    color:var(--text-dim);font-family:'IBM Plex Mono';font-size:.72rem;
+  }
+
+  /* ===== REVIEWS ===== */
+  .reviews{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .rating-banner{display:flex;align-items:center;gap:18px;margin-bottom:44px;flex-wrap:wrap;}
+  .rating-banner .score{font-family:'Space Grotesk';font-size:2.6rem;font-weight:700;color:var(--amber);}
+  .stars{color:var(--amber);letter-spacing:2px;font-size:1.1rem;}
+  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  @media(max-width:900px){.reviews-grid{grid-template-columns:1fr 1fr;}}
+  @media(max-width:600px){.reviews-grid{grid-template-columns:1fr;}}
+  .review-card{background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:22px;}
+  .review-card .stars{display:block;margin-bottom:10px;}
+  .review-card p{font-size:.92rem;color:var(--text);margin:0 0 14px;}
+  .review-card .who{font-family:'IBM Plex Mono';font-size:.76rem;color:var(--text-dim);}
+
+  /* ===== FAQ ===== */
+  .faq-item{border-bottom:1px solid var(--line);}
+  .faq-q{
+    width:100%;text-align:left;background:none;border:0;color:var(--text);
+    padding:22px 0;font-family:'Space Grotesk';font-size:1.02rem;font-weight:500;
+    display:flex;justify-content:space-between;align-items:center;cursor:pointer;gap:20px;
+  }
+  .faq-q .plus{color:var(--amber);font-family:'IBM Plex Mono';font-size:1.2rem;transition:transform .25s;flex-shrink:0;}
+  .faq-item.open .plus{transform:rotate(45deg);}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease;}
+  .faq-a p{color:var(--text-dim);padding-bottom:22px;margin:0;max-width:70ch;}
+
+  /* ===== CTA BAND ===== */
+  .cta-band{
+    background:linear-gradient(120deg, var(--copper), var(--amber));
+    color:#191205;text-align:center;
+  }
+  .cta-band h2{color:#191205;font-size:clamp(1.6rem,3vw,2.2rem);}
+  .cta-band p{max-width:52ch;margin:0 auto 30px;opacity:.85;}
+  .cta-band .btn-primary{background:#191205;color:#f2eee5;}
+  .cta-band .btn-primary:hover{background:#2a1e0d;}
+
+  /* ===== CONTACT ===== */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;}
+  @media(max-width:900px){.contact-grid{grid-template-columns:1fr;}}
+  .contact-cards{display:grid;gap:14px;margin-bottom:28px;}
+  .contact-card{
+    display:flex;align-items:center;gap:14px;background:var(--panel);border:1px solid var(--line);
+    border-radius:4px;padding:16px 18px;text-decoration:none;color:var(--text);
+    transition:border-color .2s;
+  }
+  .contact-card:hover{border-color:var(--copper);}
+  .contact-card .ic{font-size:1.3rem;}
+  .contact-card .t{font-family:'IBM Plex Mono';font-size:.7rem;color:var(--text-dim);letter-spacing:.06em;text-transform:uppercase;}
+  .contact-card .v{font-weight:600;}
+  .map-embed{
+    aspect-ratio:4/3;background:var(--panel-2);border:1px solid var(--line);border-radius:4px;
+    display:flex;align-items:center;justify-content:center;color:var(--text-dim);
+    font-family:'IBM Plex Mono';font-size:.8rem;text-align:center;padding:20px;
+  }
+
+  form.contact-form{display:grid;gap:14px;}
+  .contact-form label{font-family:'IBM Plex Mono';font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--text-dim);display:block;margin-bottom:6px;}
+  .contact-form input,.contact-form select,.contact-form textarea{
+    width:100%;background:var(--panel);border:1px solid var(--line);border-radius:3px;
+    padding:12px 14px;color:var(--text);font-family:'IBM Plex Sans';font-size:.94rem;
+  }
+  .contact-form textarea{resize:vertical;min-height:110px;}
+  .contact-form .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  @media(max-width:560px){.contact-form .row2{grid-template-columns:1fr;}}
+  .form-note{font-size:.78rem;color:var(--text-dim);margin-top:6px;}
+  .form-status{font-size:.85rem;margin-top:10px;min-height:1.2em;}
+
+  /* ===== FOOTER ===== */
+  footer{border-top:1px solid var(--line);padding:44px 0 30px;}
+  .footer-grid{display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px;align-items:center;}
+  footer .fine{color:var(--text-dim);font-size:.8rem;}
+  .footer-links{display:flex;gap:20px;font-size:.82rem;}
+  .footer-links a{text-decoration:none;color:var(--text-dim);}
+  .footer-links a:hover{color:var(--amber);}
+
+  /* Floating WhatsApp */
+  .float-wa{
+    position:fixed;right:22px;bottom:22px;z-index:90;
+    width:58px;height:58px;border-radius:50%;background:#2f6e5c;
+    display:flex;align-items:center;justify-content:center;color:#eafff5;
+    text-decoration:none;font-size:1.5rem;box-shadow:0 10px 26px rgba(0,0,0,.4);
+    transition:transform .2s;
+  }
+  .float-wa:hover{transform:scale(1.07);}
+
+  /* scroll reveal */
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease, transform .6s ease;}
+  .reveal.in{opacity:1;transform:translateY(0);}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <a href="#top" class="brand"><span class="bolt">⚡</span> Rogge & Sohn <span style="color:var(--text-dim);font-weight:400;">Elektrotechnik</span></a>
+    <div class="navlinks" id="navlinks">
+      <a href="#leistungen">Leistungen</a>
+      <a href="#ueber-uns">Über uns</a>
+      <a href="#galerie">Referenzen</a>
+      <a href="#bewertungen">Bewertungen</a>
+      <a href="#faq">FAQ</a>
+      <a href="#kontakt">Kontakt</a>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px;">
+      <a href="tel:+493035303818" class="nav-cta">📞 030 35 30 38 18</a>
+      <button class="burger" id="burgerBtn" aria-label="Menü öffnen" aria-expanded="false">☰</button>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">Meisterbetrieb · Berlin-Spandau</div>
+        <h1>Strom, der einfach <em>funktioniert</em> — installiert von Rogge & Sohn.</h1>
+        <p class="lead">Elektroinstallation, Verteilersysteme, Datennetzwerke und Lichtkonzepte für Zuhause und Gewerbe in Spandau und Umgebung. Sauber geplant, fachgerecht umgesetzt, verlässlich betreut.</p>
+        <div class="hero-actions">
+          <a href="tel:+493035303818" class="btn btn-primary">📞 Jetzt anrufen</a>
+          <a href="https://wa.me/493035303818?text=Hallo%20Rogge%20%26%20Sohn%2C%20ich%20interessiere%20mich%20f%C3%BCr%20einen%20Termin." class="btn btn-whatsapp" target="_blank" rel="noopener">💬 WhatsApp schreiben</a>
+          <a href="#kontakt" class="btn btn-ghost">Angebot anfragen</a>
+        </div>
+        <div class="trustline">
+          <div class="trust-item"><b>5,0 ★</b>Google-Bewertung</div>
+          <div class="trust-item"><b>GmbH</b>Eingetragener Meisterbetrieb</div>
+          <div class="trust-item"><b>Spandau</b>Vor Ort & zuverlässig</div>
+        </div>
+      </div>
+
+      <div class="panelbox" aria-hidden="true">
+        <div class="panelbox-head">
+          <span>VERTEILERKASTEN · UNSERE LEISTUNGEN</span>
+          <span class="dot"></span>
+        </div>
+        <div class="breakers">
+          <div class="breaker"><div class="code">L1</div><div class="label">Elektroinstallation</div><div class="switch"></div></div>
+          <div class="breaker"><div class="code">L2</div><div class="label">Verteilersysteme</div><div class="switch"></div></div>
+          <div class="breaker"><div class="code">L3</div><div class="label">Lichtkonzepte</div><div class="switch"></div></div>
+          <div class="breaker"><div class="code">N</div><div class="label">Datennetzwerke</div><div class="switch"></div></div>
+          <div class="breaker"><div class="code">PE</div><div class="label">E-Check & Prüfung</div><div class="switch"></div></div>
+          <div class="breaker"><div class="code">RCD</div><div class="label">Notdienst</div><div class="switch"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="ueber-uns">
+    <div class="wrap about-grid">
+      <div class="reveal">
+        <div class="eyebrow">Über uns</div>
+        <h2>Elektrotechnik, der Ihre Nachbarn vertrauen.</h2>
+        <p style="color:var(--text-dim);">Rogge & Sohn Elektrotechnik GmbH ist ein inhabergeführter Meisterbetrieb aus Berlin-Spandau. Wir planen und installieren Elektroanlagen für Wohnungen, Häuser und Gewerbeflächen — von der einzelnen Steckdose bis zum kompletten Verteilerschrank. Unser Anspruch: saubere Arbeit, klare Kommunikation und Termine, auf die man sich verlassen kann.</p>
+        <ul class="about-list">
+          <li>Transparente Kostenvoranschläge vor Arbeitsbeginn</li>
+          <li>Erfahrenes Team für Neubau, Renovierung & Störungsdienst</li>
+          <li>Sorgfältige, rückstandsfreie Arbeitsweise in bewohnten Räumen</li>
+          <li>Persönlicher Ansprechpartner von der Anfrage bis zur Abnahme</li>
+        </ul>
+      </div>
+      <div class="about-figure reveal">
+        [ Platzhalter: Teamfoto oder Firmensitz Wustermarker Str. 21 ]
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="leistungen">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="eyebrow">Leistungen</div>
+        <h2>Alles rund um Ihre Elektrik — aus einer Hand</h2>
+        <p>Von der Reparatur einer einzelnen Leitung bis zur kompletten Elektroplanung eines Neubaus.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal"><div class="num">01</div><h3>Elektroinstallation</h3><p>Neuinstallation und Modernisierung von Leitungen, Steckdosen und Schaltern in Wohn- und Gewerberäumen.</p></div>
+        <div class="service-card reveal"><div class="num">02</div><h3>Verteilersysteme</h3><p>Bau, Austausch und Anschluss von Sicherungs-, Zähler- und Steuerschränken nach aktuellem Standard.</p></div>
+        <div class="service-card reveal"><div class="num">03</div><h3>Lichtkonzepte & Planung</h3><p>Individuelle Beleuchtungslösungen für Wohnräume, Büros und Schaufenster — von der Idee bis zur Umsetzung.</p></div>
+        <div class="service-card reveal"><div class="num">04</div><h3>Datennetzwerke</h3><p>Planung und Verlegung von Netzwerkverkabelung für Home-Office, Büros und smarte Haustechnik.</p></div>
+        <div class="service-card reveal"><div class="num">05</div><h3>E-Check & Prüfung</h3><p>Sicherheitsprüfung bestehender Elektroanlagen inklusive Prüfprotokoll für Eigentümer und Vermieter.</p></div>
+        <div class="service-card reveal"><div class="num">06</div><h3>Störungs- & Notdienst</h3><p>Schnelle Hilfe bei Stromausfall, defekten Leitungen oder ausgelösten Sicherungen.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="galerie">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="eyebrow">Referenzen</div>
+        <h2>Einblicke in unsere Arbeit</h2>
+        <p>Platzhalter für Projektfotos — echte Bilder folgen nach Absprache mit dem Betrieb.</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item reveal">[ Platzhalter: Verteilerschrank-Montage ]</div>
+        <div class="gallery-item reveal">[ Platzhalter: Wohnungsinstallation ]</div>
+        <div class="gallery-item reveal">[ Platzhalter: Lichtkonzept Büro ]</div>
+        <div class="gallery-item reveal">[ Platzhalter: Team bei der Arbeit ]</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="reviews" id="bewertungen">
+    <div class="wrap">
+      <div class="rating-banner reveal">
+        <div class="score">5,0</div>
+        <div>
+          <div class="stars">★★★★★</div>
+          <div style="color:var(--text-dim);font-size:.88rem;">basierend auf Google-Bewertungen</div>
+        </div>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card reveal">
+          <span class="stars">★★★★★</span>
+          <p>„Sehr freundlich, kam schnell vorbei und hat die Ursache des Problems genau erklärt. Saubere und fachgerechte Ausführung.“</p>
+          <div class="who">— Google-Bewertung</div>
+        </div>
+        <div class="review-card reveal">
+          <span class="stars">★★★★★</span>
+          <p>„Nach unserer Grundrissänderung wurde die komplette Elektroinstallation entsprechend angepasst — auch kurzfristige Änderungswünsche wurden zuverlässig umgesetzt.“</p>
+          <div class="who">— Google-Bewertung</div>
+        </div>
+        <div class="review-card reveal">
+          <span class="stars">★★★★★</span>
+          <p>„Telefonisch schnell erreichbar, Termin zeitnah vereinbart, pünktlich und sehr freundlich vor Ort. Der Preis war ausgesprochen fair.“</p>
+          <div class="who">— Google-Bewertung</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap" style="max-width:800px;">
+      <div class="sec-head reveal">
+        <div class="eyebrow">Häufige Fragen</div>
+        <h2>Gut zu wissen</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <button class="faq-q">Wie schnell bekomme ich einen Termin? <span class="plus">+</span></button>
+          <div class="faq-a"><p>Bei akuten Störungen versuchen wir, kurzfristig einen Termin anzubieten. Für Renovierungs- und Neubauprojekte planen wir gemeinsam einen passenden Zeitrahmen.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q">Erhalte ich vorab einen Kostenvoranschlag? <span class="plus">+</span></button>
+          <div class="faq-a"><p>Ja. Nach einer kurzen Bestandsaufnahme erhalten Sie eine transparente Einschätzung, bevor die Arbeiten beginnen.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q">Arbeiten Sie auch in bewohnten Wohnungen? <span class="plus">+</span></button>
+          <div class="faq-a"><p>Selbstverständlich. Wir arbeiten sorgfältig und rückstandsfrei und stimmen den Ablauf vorab mit Ihnen ab.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q">Übernehmen Sie auch die Abnahmeprüfung? <span class="plus">+</span></button>
+          <div class="faq-a"><p>Ja, auf Wunsch inklusive Prüfprotokoll gemäß aktuellen Sicherheitsstandards.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q">In welchen Stadtteilen sind Sie tätig? <span class="plus">+</span></button>
+          <div class="faq-a"><p>Schwerpunkt ist Berlin-Spandau, auf Anfrage übernehmen wir auch Projekte in angrenzenden Bezirken.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band">
+    <div class="wrap">
+      <h2>Elektro-Anliegen? Wir schalten uns ein.</h2>
+      <p>Rufen Sie an oder schreiben Sie uns — wir melden uns in der Regel noch am selben Tag zurück.</p>
+      <a href="tel:+493035303818" class="btn btn-primary">📞 030 35 30 38 18 anrufen</a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="kontakt">
+    <div class="wrap contact-grid">
+      <div class="reveal">
+        <div class="eyebrow">Kontakt</div>
+        <h2>Sprechen Sie mit uns</h2>
+        <div class="contact-cards" style="margin-top:26px;">
+          <a href="tel:+493035303818" class="contact-card">
+            <span class="ic">📞</span>
+            <div><div class="t">Telefon</div><div class="v">030 35 30 38 18</div></div>
+          </a>
+          <a href="https://wa.me/493035303818" target="_blank" rel="noopener" class="contact-card">
+            <span class="ic">💬</span>
+            <div><div class="t">WhatsApp</div><div class="v">Direkt schreiben</div></div>
+          </a>
+          <a href="mailto:info@roggeundsohnelektrotechnik.de" class="contact-card">
+            <span class="ic">✉️</span>
+            <div><div class="t">E-Mail</div><div class="v">info@roggeundsohnelektrotechnik.de</div></div>
+          </a>
+          <div class="contact-card" style="cursor:default;">
+            <span class="ic">📍</span>
+            <div><div class="t">Adresse</div><div class="v">Wustermarker Str. 21, 13583 Berlin</div></div>
+          </div>
+        </div>
+        <div class="map-embed" style="padding:0;overflow:hidden;">
+          <iframe
+            title="Standort Rogge & Sohn Elektrotechnik GmbH"
+            src="https://www.google.com/maps?q=Rogge+%26+Sohn+Elektrotechnik+GmbH,+Wustermarker+Str.+21,+13583+Berlin&output=embed"
+            width="100%" height="100%" style="border:0;min-height:280px;"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <!--
+          KONTAKTFORMULAR — Versand über Web3Forms (kostenlos, kein eigenes Backend nötig)
+          SETUP (einmalig, 2 Minuten):
+          1. Auf https://web3forms.com mit der Empfänger-E-Mail-Adresse
+             (z. B. info@roggeundsohnelektrotechnik.de) registrieren.
+          2. Den kostenlosen "Access Key" kopieren, den Web3Forms per E-Mail zusendet.
+          3. Unten den Wert von "access_key" durch diesen Key ersetzen.
+          Ab dann werden alle Formular-Anfragen direkt an die Empfänger-E-Mail gesendet.
+        -->
+        <form class="contact-form" id="contactForm">
+          <input type="hidden" name="access_key" value="EINFÜGEN-IHR-WEB3FORMS-ACCESS-KEY">
+          <input type="hidden" name="subject" value="Neue Anfrage über die Website – Rogge & Sohn Elektrotechnik">
+          <input type="hidden" name="from_name" value="Website Rogge & Sohn Elektrotechnik">
+          <div class="row2">
+            <div>
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+              <label for="phone">Telefon</label>
+              <input type="tel" id="phone" name="phone" required>
+            </div>
+          </div>
+          <div>
+            <label for="email">E-Mail</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div>
+            <label for="service">Anliegen</label>
+            <select id="service" name="service">
+              <option>Elektroinstallation</option>
+              <option>Verteilersysteme</option>
+              <option>Lichtkonzepte</option>
+              <option>Datennetzwerke</option>
+              <option>E-Check & Prüfung</option>
+              <option>Störung / Notdienst</option>
+              <option>Sonstiges</option>
+            </select>
+          </div>
+          <div>
+            <label for="message">Nachricht</label>
+            <textarea id="message" name="message" placeholder="Beschreiben Sie kurz Ihr Anliegen..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="justify-content:center;" id="submitBtn">Anfrage senden</button>
+          <div class="form-note">Anfragen werden direkt per E-Mail an den Betrieb weitergeleitet.</div>
+          <div class="form-status" id="formStatus"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<a href="https://wa.me/493035303818?text=Hallo%20Rogge%20%26%20Sohn%2C%20ich%20habe%20eine%20Frage." target="_blank" rel="noopener" class="float-wa" aria-label="Auf WhatsApp schreiben">💬</a>
+
+<footer>
+  <div class="wrap footer-grid">
+    <div class="fine">© 2026 Rogge & Sohn Elektrotechnik GmbH · Wustermarker Str. 21, 13583 Berlin · [Platzhalter: HRB-Nummer, Geschäftsführer]</div>
+    <div class="footer-links">
+      <a href="#kontakt">Kontakt</a>
+      <a href="#">Impressum [Platzhalter]</a>
+      <a href="#">Datenschutz [Platzhalter]</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile nav toggle
+  const burger = document.getElementById('burgerBtn');
+  const navlinks = document.getElementById('navlinks');
+  burger.addEventListener('click', () => {
+    navlinks.classList.toggle('open');
+    const expanded = navlinks.classList.contains('open');
+    burger.setAttribute('aria-expanded', expanded);
+  });
+  navlinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navlinks.classList.remove('open')));
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const q = item.querySelector('.faq-q');
+    const a = item.querySelector('.faq-a');
+    q.addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(o => { o.classList.remove('open'); o.querySelector('.faq-a').style.maxHeight = null; });
+      if (!isOpen) {
+        item.classList.add('open');
+        a.style.maxHeight = a.scrollHeight + 'px';
+      }
+    });
+  });
+
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => io.observe(el));
+
+  // Contact form — real submission via Web3Forms (see setup comment in the HTML above the form)
+  const contactForm = document.getElementById('contactForm');
+  const formStatus = document.getElementById('formStatus');
+  const submitBtn = document.getElementById('submitBtn');
+
+  contactForm.addEventListener('submit', async function(e){
+    e.preventDefault();
+
+    const accessKey = contactForm.querySelector('[name="access_key"]').value;
+    if (!accessKey || accessKey.includes('EINFÜGEN')) {
+      formStatus.style.color = 'var(--danger)';
+      formStatus.textContent = 'Formular noch nicht aktiviert: Bitte zuerst einen Web3Forms Access Key eintragen (siehe Kommentar im Code).';
+      return;
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Wird gesendet...';
+    formStatus.style.color = 'var(--text-dim)';
+    formStatus.textContent = '';
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(Object.fromEntries(new FormData(contactForm)))
+      });
+      const result = await res.json();
+
+      if (result.success) {
+        formStatus.style.color = 'var(--teal)';
+        formStatus.textContent = 'Danke! Ihre Anfrage wurde versendet. Wir melden uns zeitnah zurück.';
+        contactForm.reset();
+      } else {
+        throw new Error(result.message || 'Unbekannter Fehler');
+      }
+    } catch (err) {
+      formStatus.style.color = 'var(--danger)';
+      formStatus.textContent = 'Anfrage konnte nicht gesendet werden. Bitte rufen Sie uns direkt an: 030 35 30 38 18.';
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Anfrage senden';
+    }
+  });
+</script>
+
+</body>
+</html>
